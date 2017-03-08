@@ -84,7 +84,8 @@ Labeling seperates different regions of the heat map. The results of `scipy.ndim
 # 3. Video Implementation
 
 The code for this step is contained in the section "Video" of the IPython notebook.
-The final video can be found here: [link to video result](./project_video.mp4)
+The final video can be found here: [link to video result](./project_video_output.mp4)
+
 For the video, I applied two different strategies
 
 * First I calculate an average heat map from the heat maps of the three last frames, this gives higher robustness over time, since a wrong detection in one frame will be compensated
@@ -100,13 +101,13 @@ Using no average heat map leads to the detection of false positives. (In order t
 
 ```python
 from IPython.display import HTML
-HTML("""<video width="960" height="540" controls><source src="{0}"></video>""".format('test_video_output.mp4'))
+HTML("""<video width="960" height="540" controls><source src="{0}"></video>""".format('project_video_output.mp4'))
 ```
 
 
 
 
-<video width="960" height="540" controls><source src="test_video_output.mp4"></video>
+<video width="960" height="540" controls><source src="project_video_output.mp4"></video>
 
 
 
